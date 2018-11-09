@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import Input from "../presentational/Input";
-class FormContainer extends Component {
+import Login from "../../presentational/Login/index";
+class LoginContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,7 +16,7 @@ class FormContainer extends Component {
     const { seo_title } = this.state;
     return (
       <form id="article-form">
-        <Input
+        <Login
           text="SEO title"
           label="seo_title"
           type="text"
@@ -28,7 +28,7 @@ class FormContainer extends Component {
     );
   }
 }
-export default FormContainer;
+export default LoginContainer;
 
 const wrapper = document.getElementById("create-article-form");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+wrapper ? ReactDOM.render(<LoginContainer />, wrapper) : false;
